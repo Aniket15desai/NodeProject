@@ -1,0 +1,51 @@
+<%- include('./layouts/header') %>
+<title>Register</title>
+<div id="login-box">
+  <div class="left">
+    <h1>Register</h1>
+    <form action="/auth/register" method="post" class="lg-form">
+      <div>
+        <label for="email">Email/Username</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          value="<%= locals.email ? email : '' %>"
+        />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <label for="password2">Confirm password</label>
+        <input type="password" name="password2" id="password2" />
+      </div>
+      <div>
+        <input type="submit" value="Register" />
+      </div>
+    </form>
+    <div>
+      <p>
+        Already have an account? <span><a href="/auth/login">Login</a></span>
+      </p>
+    </div>
+  </div>
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+
+    <a href="https://en-gb.facebook.com/?lang=en">
+        <button class="social-signin facebook">Log in with facebook</button>
+    </a>
+    <a href="https://twitter.com/?lang=en">
+        <button class="social-signin twitter">Log in with Twitter</button>
+    </a>
+    <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+        <button class="social-signin google">Log in with Google+</button>
+    </a>
+  </div>
+  <div class="or">OR</div>
+</div>
+
+<br />
+<%- include('./layouts/footer') %>

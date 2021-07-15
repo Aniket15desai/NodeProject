@@ -1,0 +1,41 @@
+<%- include('./layouts/header') %>
+<div id="login-box">
+  <div class="left">
+    <h1>Login</h1>
+    <form action="/auth/login" method="post" class="lg-form">
+      <div>
+        <label for="email">Email/Username</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <input type="submit" value="Login" />
+      </div>
+    </form>
+    <div>
+      <p>
+        Don't have an account? <span><a href="/auth/register">Sign Up</a></span>
+      </p>
+    </div>
+  </div>
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+
+    <a href="https://en-gb.facebook.com/?lang=en">
+        <button class="social-signin facebook">Log in with facebook</button>
+    </a>
+    <a href="https://twitter.com/?lang=en">
+        <button class="social-signin twitter">Log in with Twitter</button>
+    </a>
+    <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+        <button class="social-signin google">Log in with Google+</button>
+    </a>
+  </div>
+  <div class="or">OR</div>
+</div>
+
+<br />
+<%- include('./layouts/footer') %>

@@ -1,0 +1,16 @@
+<nav>
+  <h3>NODE JS</h3>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <% if (user) { %>
+    <li><a href="/user/profile">Profile</a></li>
+    <% if (user.role === 'ADMIN' || 'CLIENT') { %>
+    <li><a href="/admin/users">Manage Users</a></li>
+    <% } %>
+    <li><a href="/auth/logout">Logout</a></li>
+    <% } else { %>
+    <li><a href="/auth/register">Register</a></li>
+    <li><a href="/auth/login">Login</a></li>
+    <% } %>
+  </ul>
+</nav>
